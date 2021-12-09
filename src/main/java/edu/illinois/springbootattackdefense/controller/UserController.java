@@ -43,7 +43,7 @@ public class UserController {
 
   @RequestMapping("/logout")
   public void logout(HttpSession session) {
-    session.setAttribute("user_id", -1);
+    session.setAttribute("user_id", null);
   }
 
   @RequestMapping("/info/{id}")

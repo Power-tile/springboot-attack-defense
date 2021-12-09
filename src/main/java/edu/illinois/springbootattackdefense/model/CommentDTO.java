@@ -7,11 +7,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import edu.illinois.springbootattackdefense.vo.CommentAddVO;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "comments")
+@NoArgsConstructor
 public class CommentDTO {
   @Id
   @Column(name = "id")
@@ -28,4 +31,11 @@ public class CommentDTO {
 
   @Column(name = "post_id")
   private Integer postId;
+
+  public CommentDTO(CommentAddVO commentAddVO, Integer userId) {
+    this.userId = userId;
+    this.content = commentAddVO.getContent();
+    this.time = new Date();
+    this.postId = commentAddVO.getPostId();
+  }
 }
