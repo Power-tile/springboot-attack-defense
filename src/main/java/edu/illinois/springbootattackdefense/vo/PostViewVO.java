@@ -3,7 +3,6 @@ package edu.illinois.springbootattackdefense.vo;
 import java.util.Date;
 
 import edu.illinois.springbootattackdefense.model.PostDTO;
-import edu.illinois.springbootattackdefense.model.UserDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,7 +14,7 @@ public class PostViewVO {
   private String content;
   private Date time;
 
-  public PostViewVO(PostDTO postDTO, UserDTO userDTO) {
+  public PostViewVO(PostDTO postDTO, UserViewVO userDTO) {
     this.id = postDTO.getId();
     this.name = userDTO.getName();
     this.content = postDTO.getContent();

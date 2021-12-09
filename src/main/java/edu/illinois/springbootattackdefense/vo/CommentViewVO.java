@@ -2,7 +2,6 @@ package edu.illinois.springbootattackdefense.vo;
 
 import java.util.Date;
 
-import edu.illinois.springbootattackdefense.dao.CommentDAO;
 import edu.illinois.springbootattackdefense.model.CommentDTO;
 import edu.illinois.springbootattackdefense.model.UserDTO;
 import lombok.Data;

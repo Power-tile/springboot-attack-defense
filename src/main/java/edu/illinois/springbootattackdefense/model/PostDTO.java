@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import edu.illinois.springbootattackdefense.vo.PostAddVO;
 import lombok.Data;
 
 @Data
@@ -28,4 +29,11 @@ public class PostDTO {
 
   @Column(name = "status")
   private Integer status;
+
+  public PostDTO(PostAddVO postAddVO, Integer userId) {
+    this.content = postAddVO.getContent();
+    this.time = new Date();
+    this.status = 0;
+    this.userId = userId;
+  }
 }

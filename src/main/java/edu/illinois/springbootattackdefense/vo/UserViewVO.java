@@ -6,12 +6,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class UserVO {
+public class UserViewVO {
   private Integer id;
   private String name;
   private Integer role;
 
-  public UserVO(UserDTO userDTO) {
+  public UserViewVO(UserDTO userDTO) {
     this.id = userDTO.getId();
     this.name = userDTO.getName();
     this.role = userDTO.getRole();
