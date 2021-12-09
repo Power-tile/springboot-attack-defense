@@ -1,14 +1,14 @@
 package edu.illinois.springbootattackdefense.service;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import edu.illinois.springbootattackdefense.dao.UserDAO;
 import edu.illinois.springbootattackdefense.model.UserDTO;
 
-@Resource
+@Component
 public class PrivilegeService {
   @Autowired
   UserDAO userDAO;

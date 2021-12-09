@@ -9,10 +9,12 @@ import javax.persistence.Table;
 
 import edu.illinois.springbootattackdefense.vo.PostAddVO;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "posts")
+@NoArgsConstructor
 public class PostDTO {
   @Id
   @Column(name = "id")

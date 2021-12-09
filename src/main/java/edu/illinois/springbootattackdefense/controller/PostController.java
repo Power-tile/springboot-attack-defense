@@ -21,7 +21,7 @@ import edu.illinois.springbootattackdefense.vo.PostAddVO;
 import edu.illinois.springbootattackdefense.vo.PostViewVO;
 
 @RestController
-@RequestMapping(name = "/api/post")
+@RequestMapping("/api/post")
 public class PostController {
   @Autowired
   PostDAO postDAO;
